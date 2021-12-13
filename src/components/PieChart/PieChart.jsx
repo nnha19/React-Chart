@@ -1,14 +1,14 @@
-import React from "react";
-import "./PieChart.css";
+import React, { useEffect, useState } from "react";
 import Chart from "react-google-charts";
 
-const PieChart = ({ people }) => {
-  const males = people.filter(
-    (d) => d.gender === "M" || d.gender.toLowerCase() === "male"
+const PieChart = ({ genders }) => {
+  const males = genders.filter(
+    (d) => d === "M" || d.toLowerCase() === "male"
   ).length;
-  const females = people.filter(
-    (d) => d.gender === "F" || d.gender.toString() === "female"
+  const females = genders.filter(
+    (d) => d === "F" || d.toString() === "female"
   ).length;
+
   return (
     <div>
       <Chart

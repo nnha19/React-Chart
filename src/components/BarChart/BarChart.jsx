@@ -1,11 +1,11 @@
 import React from "react";
-import "./BarChart.css";
 import Chart from "react-google-charts";
 
-const BarChart = ({ people }) => {
-  const youngAdults = people.filter((d) => d.age <= 35).length;
-  const adults = people.filter((d) => d.age > 35 && d.age <= 50).length;
-  const seniors = people.filter((d) => d.age > 50).length;
+const BarChart = ({ age }) => {
+  const youngAdults = age.filter((d) => d <= 35).length;
+  const adults = age.filter((d) => d > 35 && d <= 50).length;
+  const seniors = age.filter((d) => d > 50).length;
+
   return (
     <div>
       <Chart
@@ -20,12 +20,10 @@ const BarChart = ({ people }) => {
           ["Seniors", seniors],
         ]}
         options={{
-          // Material design options
           chart: {
             title: "Age",
           },
         }}
-        // For tests
         rootProps={{ "data-testid": "2" }}
       />
     </div>
