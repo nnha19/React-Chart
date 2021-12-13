@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.charts {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+/* .charts > * {
+  width: 50%;
+} */
+
+@media (max-width: 1200px) {
+  .charts {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

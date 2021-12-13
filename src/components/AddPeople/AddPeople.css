@@ -1,0 +1,52 @@
+.add-new {
+  padding: 1rem 4rem;
+}
+.add-new__btn {
+  padding: 0.8rem 1rem;
+  background: orangered;
+  border: none;
+  outline: none;
+  color: white;
+  margin-left: auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+.form-container {
+  height: 24rem;
+  width: 24rem;
+  box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.9);
+  border-radius: 8px;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form__header {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+.form {
+  width: 80%;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+.form__input {
+  width: 100%;
+  padding: 0.4rem 1rem;
+  margin: 0.5rem 0;
+}
