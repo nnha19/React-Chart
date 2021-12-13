@@ -23,7 +23,7 @@
   z-index: 5;
 }
 .form-container {
-  height: 24rem;
+  min-height: 24rem;
   width: 24rem;
   box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.9);
   border-radius: 8px;
@@ -49,4 +49,18 @@
   width: 100%;
   padding: 0.4rem 1rem;
   margin: 0.5rem 0;
+}
+.error {
+  color: red;
+}
+
+.added {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: orangered;
+  padding: 0.4rem 1rem;
+  color: white;
+  border-radius: 4px;
 }

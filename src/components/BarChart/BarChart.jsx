@@ -1,12 +1,11 @@
 import React from "react";
 import "./BarChart.css";
-import { datas } from "../../FAKE_DATA";
 import Chart from "react-google-charts";
 
-const BarChart = () => {
-  const youngAdults = datas.filter((d) => d.age <= 35).length;
-  const adults = datas.filter((d) => d.age > 35 && d.age <= 50).length;
-  const seniors = datas.filter((d) => d.age > 50).length;
+const BarChart = ({ people }) => {
+  const youngAdults = people.filter((d) => d.age <= 35).length;
+  const adults = people.filter((d) => d.age > 35 && d.age <= 50).length;
+  const seniors = people.filter((d) => d.age > 50).length;
   return (
     <div>
       <Chart

@@ -1,11 +1,14 @@
 import React from "react";
 import "./PieChart.css";
-import { datas } from "../../FAKE_DATA";
 import Chart from "react-google-charts";
 
-const PieChart = () => {
-  const males = datas.filter((d) => d.gender === "M").length;
-  const females = datas.filter((d) => d.gender === "F").length;
+const PieChart = ({ people }) => {
+  const males = people.filter(
+    (d) => d.gender === "M" || d.gender.toLowerCase() === "male"
+  ).length;
+  const females = people.filter(
+    (d) => d.gender === "F" || d.gender.toString() === "female"
+  ).length;
   return (
     <div>
       <Chart
